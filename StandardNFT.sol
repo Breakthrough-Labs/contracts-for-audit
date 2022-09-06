@@ -10,7 +10,7 @@ contract StandardNFT is ERC721, ERC721Enumerable, Ownable {
     string private _baseURIextended; // Used within the OpenZeppelin `_baseURI` override. Only settable by the Owner.
     uint256 public immutable MAX_SUPPLY; // This cannot be changed once the contract is deployed.
     uint256 public currentPrice; // Price used within the `mint` function. Only settable by the Owner.
-    bool public saleIsActive = false; // Switch that determines whether anything other than the owner can mint new NFTs. Only settable by the Owner.
+    bool public saleIsActive = true; // Switch that determines whether anything other than the owner can mint new NFTs. Only settable by the Owner.
 
     // This constructor is pulled directly from the OpenZeppelin ERC721 implementation wizard
     // https://wizard.openzeppelin.com/#erc721
