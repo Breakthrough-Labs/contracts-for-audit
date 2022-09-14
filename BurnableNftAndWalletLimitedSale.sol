@@ -31,6 +31,7 @@ contract BurnableLimitedNFT is
     ERC721Enumerable,
     ERC721Burnable,
     Ownable,
+    ReentrancyGuard,
     Royalty
 {
     uint256 public immutable MAX_SUPPLY;
@@ -206,4 +207,3 @@ contract BurnableLimitedNFT is
         return super.supportsInterface(interfaceId);
     }
 }
-
